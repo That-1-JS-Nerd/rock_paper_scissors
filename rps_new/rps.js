@@ -11,14 +11,15 @@ const closeWin = document.querySelector('.leave');
 const returnWin = document.querySelector('.return');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
+const gameStats = document.querySelector('.game-stats');
 const winnerMsg = document.querySelector('.winner-stats');
-winnerMsg.textContent = '';
+
 
 let statMsg = document.querySelector('.current');
 statMsg.textContent = '';
+winnerMsg.textContent = '';
 
-const gameStats = document.querySelector('.game-stats');
-displayMsg()
+displayMsg();
 
 function computerPlay() {
     const choices = ['Rock', 'Paper', 'Scissors'];
@@ -40,8 +41,7 @@ function playRound() {
         ++computerScore;
         statMsg.textContent = `Computer wins: ${computerSelection} beats ${playerSelection}`;
     }
-
-    gameStats.textContent = `${playerScore} - ${computerScore}`;
+    displayMsg();
     endGame();
 }
 
