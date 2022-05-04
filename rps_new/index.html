@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="modal">
+            <h2>Are you sure?</h2>
+            <h3>Do you really want to exit the game now?</h3>
+            <div class="btn-section">
+                <button class="leave">Leave</button>
+                <button class="return">Return</button>
+            </div>
+        </div>
+        <div class="header">
+            <div class="btn-section">
+                <button id="restart" class="btn btn-primary">Restart Game</button>
+                <button id="exit" class="btn btn-secondary">Quit Game</button>
+            </div>
+            <div class="title">ROCK, PAPER, SCISSORS</div>
+            <div class="win-stats">
+                <h1 class="winner-stats"></h1>
+            </div>
+        </div>
+        <div class="content">
+            <div class="main">
+                <button id="rock" class="playBtn rockBtn"><img src="./img/Rock.svg" alt="rock"></button>
+                <button id="paper" class="playBtn paperBtn"><img src="./img/Paper.svg" alt="paper"></button>
+                <button id="scissors" class="playBtn scissorsBtn"><img src="./img/Scissors.svg" alt="scissors"></button>
+            </div>
+        </div>
+        <div class="statistics">
+            <h2 class="game-stats"></h2>
+            <h2 class="current"></h2>
+        </div>
+    </div>
+    <script src="./rps.js"></script>
+</body>
+</html>
