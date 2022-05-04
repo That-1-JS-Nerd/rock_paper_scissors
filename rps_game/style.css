@@ -1,0 +1,164 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* Modal styling */
+.modal {
+    color: #02020c;
+    background-color: #fff;
+    width: 900px;
+    height: 600px;
+    display: none;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #060629;
+}
+
+#header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: fit-content;
+    margin: auto auto;
+}
+
+.main-section > .first-row > .rock,
+.main-section > .second-row > .paper,
+.main-section > .second-row > .scissors {
+    border-radius: 50%;
+}
+
+.main-section > .first-row > .rock:hover,
+.main-section > .second-row > .paper:hover,
+.main-section > .second-row > .scissors:hover {
+    box-shadow: 2px 0 10px 5px rgba(6, 233, 6, 0.6);
+}
+
+.main-section > .second-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-section > .first-row > .rock {
+    background-color: #ffee00;
+}
+
+.main-section > .second-row > .paper {
+    background-color: #c20000;
+    display: inline-block;
+}
+
+.main-section > .second-row > .scissors {
+    background-color: #1ce002;
+    display: inline-block;
+}
+
+.btn-section {
+    padding: 10px 10px;
+    width: 500px; 
+}
+
+.game-sect {
+    flex: 1;
+    width: 100%;
+    display: flex;
+}
+
+.player-sect,
+.computer-sect {
+    text-align: center;
+    padding: 20px;
+    width: 30%;
+    height: auto;
+    background-color: #f3f3f3;
+}
+
+.comp-header > h2,
+.pl-header > h2 {
+    font-size: 45px;
+}
+
+/* Restart & Quit Buttons */
+
+.play-btn {
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    transition-duration: all .07s ease;
+}
+
+.play-btn:hover {
+    cursor: pointer;
+}
+
+.btn {
+    transition: all .07s ease;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    width: 100px;
+    padding: 5px 25px;
+    margin: 20px 10px;
+}
+
+.btn-primary {
+    background-color: #e6e21f;
+}
+
+.btn-secondary {
+    background-color: #e40000;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 2px 7px #888888;
+}
+
+.score-section {
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-section h2 {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.player-score,
+.computer-score {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.scale {
+    transform: scale(1.1);
+}
