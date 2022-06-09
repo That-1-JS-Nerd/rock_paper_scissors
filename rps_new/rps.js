@@ -3,6 +3,7 @@
 let playerScore = 0;
 let computerScore = 0;
 let playerSelection;
+let statMsg = document.querySelector('.current');
 
 const playBtns = document.querySelectorAll('.playBtn');
 const exitBtn = document.querySelector('#exit');
@@ -12,13 +13,26 @@ const returnWin = document.querySelector('.return');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const winnerMsg = document.querySelector('.winner-stats');
-winnerMsg.textContent = '';
+const gameStats = document.querySelector('.game-stats');
+const gameStats = document.querySelector('.game-stats');
 
-let statMsg = document.querySelector('.current');
+winnerMsg.textContent = '';
 statMsg.textContent = '';
 
-const gameStats = document.querySelector('.game-stats');
-displayMsg()
+displayMsg();
+
+exitBtn.addEventListener('click', () => {
+    overlay.style.display = 'block';
+    modal.style.display = 'block';
+});
+
+restartBtn.addEventListener('click', () => restart());
+closeWin.addEventListener('click', () => window.close());
+
+returnWin.addEventListener('click', ()=> {
+    overlay.style.display = 'none';
+    modal.style.display = 'none';
+});
 
 function computerPlay() {
     const choices = ['Rock', 'Paper', 'Scissors'];
@@ -40,7 +54,6 @@ function playRound() {
         ++computerScore;
         statMsg.textContent = `Computer wins: ${computerSelection} beats ${playerSelection}`;
     }
-
     gameStats.textContent = `${playerScore} - ${computerScore}`;
     endGame();
 }
@@ -51,24 +64,6 @@ function endGame() {
         playBtns.forEach((btn) => btn.removeEventListener('click', playRound));
     }
 }
-
-exitBtn.addEventListener('click', () => {
-    overlay.style.display = 'block';
-    modal.style.display = 'block';
-});
-
-restartBtn.addEventListener('click', () => {
-    restart();
-})
-
-closeWin.addEventListener('click', () => {
-    window.close();
-});
-
-returnWin.addEventListener('click', ()=> {
-    overlay.style.display = 'none';
-    modal.style.display = 'none';
-});
 
 function displayMsg() {
     gameStats.textContent = `${playerScore} - ${computerScore}`;
